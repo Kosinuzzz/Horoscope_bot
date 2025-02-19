@@ -1,0 +1,79 @@
+2025-02-18 21:06:54,775 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-18 21:18:00,742 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /start
+2025-02-18 21:18:06,543 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-18 21:18:26,265 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /help
+2025-02-18 21:18:31,366 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: Hops
+2025-02-18 21:18:41,160 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: Жопа
+2025-02-18 21:18:48,923 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: Поправь это
+2025-02-18 21:43:40,312 - root - INFO - User ID: 257019896, Username: moralez_s, Message: /start
+2025-02-18 21:43:44,495 - root - INFO - User ID: 257019896, Username: moralez_s, Message: /horoscope
+2025-02-18 21:47:44,270 - root - INFO - User ID: 415197188, Username: eryzhikov, Message: /start
+2025-02-18 21:47:49,780 - root - INFO - User ID: 415197188, Username: eryzhikov, Message: /horoscope
+2025-02-18 21:49:47,661 - root - INFO - User ID: 137948878, Username: yko_m, Message: /start
+2025-02-18 21:49:53,571 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 21:50:45,063 - root - INFO - User ID: 137948878, Username: yko_m, Message: Leo
+2025-02-18 21:50:53,580 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 21:51:29,427 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 21:51:43,545 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 21:51:59,754 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 21:52:38,729 - root - INFO - User ID: 137948878, Username: yko_m, Message: пишу в лог. подозреваю, что так и должно быть, но всё же на разные дни один и тот же гороскоп приходит
+2025-02-18 22:09:28,203 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:10:07,183 - root - ERROR - Ошибка при получении гороскопа: 400 Client Error: Bad Request for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Pisces&day=10.10.10
+2025-02-18 22:10:07,184 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:16:50,417 - root - INFO - User ID: 137948878, Username: yko_m, Message: 2010-10-10
+2025-02-18 22:16:50,417 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:16:50,611 - root - INFO - User ID: 137948878, Username: yko_m, Message: pisces
+2025-02-18 22:16:50,629 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:16:50,699 - root - INFO - User ID: 137948878, Username: yko_m, Message: TODAY
+2025-02-18 22:16:50,722 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:16:50,781 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope ну вот, я все сломал
+
+при некорректном вводе даты ничего не происходит. корректный ввод даты после не меняет ситуации. вызов главной команды /horoscope не меняет ситуацию
+2025-02-18 22:16:50,803 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:16:50,852 - root - INFO - User ID: 137948878, Username: yko_m, Message: monkey-test не пройден(
+2025-02-18 22:18:34,276 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=%D0%90%2C+%D0%B5%D1%89%D0%B5+%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D0%B5%D0%B5.+%0A%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%B7%D0%B0%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B8++%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0+%D0%B1%D0%BE%D1%82%D0%B0+%D0%BE%D1%82+4+%D0%B4%D0%BE+6+%D0%BC%D0%B8%D0%BD%D1%83%D1%82.+%D0%BE%D1%82%D0%B2%D0%B5%D1%82+%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%BD%D1%8B%D0%B5+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%28%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%2C+%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE+%D1%82%D0%B5%D0%BA%D1%81%D1%82%2C+%D1%82%D0%B5%D0%BA%D1%81%D1%82+%D0%B7%D0%B0%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE+%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0%29&day=%D0%BF%D1%8F%D1%82%D0%B5%D1%80%D0%BD%D0%BE%D0%B9+%D0%BE%D1%82%D0%B2%D0%B5%D1%82+%D0%BD%D0%B0+%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9+%D1%82%D0%B5%D0%BA%D1%81%D1%82
+2025-02-18 22:18:34,278 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:19:00,533 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:19:19,989 - root - ERROR - Ошибка при получении гороскопа: 400 Client Error: Bad Request for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Virgo&day=Tmrw
+2025-02-18 22:19:19,990 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:19:58,009 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:19:58,009 - root - INFO - User ID: 137948878, Username: yko_m, Message: засекаем время
+2025-02-18 22:19:58,165 - root - INFO - User ID: 137948878, Username: yko_m, Message: а тебе, кстати, доступна вся переписка же?
+2025-02-18 22:20:26,400 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:21:14,914 - root - INFO - User ID: 137948878, Username: yko_m, Message: логи это хорошо. тест гороскопа никак не зависит от даты?
+2025-02-18 22:21:21,701 - root - INFO - User ID: 137948878, Username: yko_m, Message: /horoscope
+2025-02-18 22:29:11,614 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-18 22:29:28,642 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=%D0%A2%D0%B5%D0%BB%D0%B5%D1%86&day=272828
+2025-02-18 22:29:28,644 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:31:22,730 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /start
+2025-02-18 22:31:24,862 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-18 22:36:15,765 - root - INFO - User ID: 257019896, Username: moralez_s, Message: Today
+2025-02-18 22:36:15,765 - root - INFO - User ID: 257019896, Username: moralez_s, Message: /horoscope
+2025-02-18 22:37:17,403 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Today&day=%D0%A5%D1%83%D0%B5%D1%81%D0%BA%D0%BE%D0%BF
+2025-02-18 22:37:17,405 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:38:53,056 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-18 22:40:35,348 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Today&day=%2Fhoroscope
+2025-02-18 22:40:35,350 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-18 22:43:59,576 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 07:41:56,515 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /start
+2025-02-19 07:42:03,513 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 07:42:33,587 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Today&day=Gg
+2025-02-19 07:42:33,592 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-19 07:44:52,507 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 07:45:19,585 - root - ERROR - Ошибка при получении гороскопа: 404 Client Error: Not Found for url: https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Today&day=Hi
+2025-02-19 07:45:19,586 - root - ERROR - Ошибка при запуске бота: 'data'
+2025-02-19 07:46:34,083 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 07:49:16,269 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: He’s
+2025-02-19 07:49:45,050 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 22:27:07,069 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: Gf
+2025-02-19 22:27:17,462 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 22:32:56,733 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 22:33:02,613 - root - INFO - Received sign: Taurus
+2025-02-19 22:33:02,614 - root - WARNING - Invalid date format received: Taurus
+2025-02-19 22:33:18,247 - root - INFO - Received sign: Today
+2025-02-19 22:33:18,248 - root - INFO - Valid date or keyword received: Today
+2025-02-19 22:36:28,277 - root - INFO - User ID: 2359248, Username: Kosinuzzz, Message: /horoscope
+2025-02-19 22:36:41,002 - root - INFO - Received sign: Taurus
+2025-02-19 22:36:41,003 - root - WARNING - Invalid date format received: Jug
+2025-02-19 22:36:50,173 - root - INFO - Received sign: Taurus
+2025-02-19 22:36:50,174 - root - INFO - Valid date or keyword received: Today

@@ -1,0 +1,14 @@
+from googletrans import Translator
+
+def fetch_horoscope(message, sign):
+    day = message.text
+    horoscope = get_daily_horoscope(sign, day)
+    data = horoscope["data"]
+    
+    translator = Translator()
+    
+    translated_horoscope = translator.translate(data["horoscope_data"], dest='ru').text
+    
+    horoscope_message = f'*Horoscope:* {translated_horoscope}\\n*Sign:* {sign}\\n*Day:* {data["date"]}'
+    bot.send_message(message.chat.id, "Here's your horoscope!")
+    bot.send_message(message.chat.id, horoscope_message, parse_mode="Markdown")
