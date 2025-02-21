@@ -4,6 +4,7 @@ import os
 import telebot
 import requests
 import re  # Добавляем импорт модуля re для работы с регулярными выражениями
+import logging  # Импортируем модуль logging
 
 load_dotenv()  # Загружаем переменные из .env
 token = os.getenv("TELEGRAM_BOT_TOKEN")  # Получаем токен бота из переменных окружения
@@ -12,6 +13,9 @@ if not token:
     raise ValueError("Не удалось получить токен Telegram. Проверьте файл .env.")  # Проверка наличия токена
 
 bot = telebot.TeleBot(token)  # Инициализация бота с токеном
+
+# Настраиваем базовую конфигурацию логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='bot.log', filemode='a')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -78,6 +82,8 @@ def get_daily_horoscope(sign: str, day: str) -> dict:
 
 @bot.message_handler(func=lambda message: True)
 def log_all_messages(message):
+    # Логируем сообщение
+    logging.info(f"Получено сообщение от {message.from_user.username}: {message.text}")
     bot.reply_to(message, "Ваше сообщение было получено и записано в лог.")  # Ответ на любое сообщение
 
 try:
