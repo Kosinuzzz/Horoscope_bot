@@ -1,0 +1,24 @@
+2025-02-20 20:58:46,182 - root - INFO - Получено сообщение от Kosinuzzz: Bush
+2025-02-20 21:01:39,656 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHANNEL_PRIVATE
+2025-02-20 21:01:39,658 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\User\Bot\kosinuzzz_bot.py", line 53, in fetch_horoscope
+    bot.send_message(message.chat.id, "Ошибка в данных гороскопа. Проверь введенные данные и попробуй позже.")
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHANNEL_PRIVATE
+
