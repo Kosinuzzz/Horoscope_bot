@@ -4,7 +4,6 @@ import os
 import telebot
 import requests
 import re  # Добавляем импорт модуля re для работы с регулярными выражениями
-import logging  # Импортируем модуль logging
 
 load_dotenv()  # Загружаем переменные из .env
 token = os.getenv("TELEGRAM_BOT_TOKEN")  # Получаем токен бота из переменных окружения
@@ -13,9 +12,6 @@ if not token:
     raise ValueError("Не удалось получить токен Telegram. Проверьте файл .env.")  # Проверка наличия токена
 
 bot = telebot.TeleBot(token)  # Инициализация бота с токеном
-
-# Настраиваем базовую конфигурацию логирования
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='bot.log', filemode='a')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -33,16 +29,11 @@ def send_tatka_message(message):
 def sign_handler(message):
     text = "Какой ты знак зодиака?\nВведи по-английски: *Aries*, *Taurus*, *Gemini*, *Cancer,* *Leo*, *Virgo*, *Libra*, *Scorpio*, *Sagittarius*, *Capricorn*, *Aquarius*, and *Pisces*."
     sent_msg = bot.send_message(message.chat.id, text, parse_mode="Markdown")  # Запрос знака зодиака
-    bot.register_next_step_handler(sent_msg, day_handler)  # Переход к следующему шагу без проверки
+    bot.register_next_step_handler(sent_msg, fetch_horoscope_today)  # Переход к получению гороскопа
 
-def day_handler(message):
+def fetch_horoscope_today(message):
     sign = message.text.capitalize()  # Предполагаем, что пользователь ввел корректный знак
-    sent_msg = bot.send_message(
-        message.chat.id, "Введите день: TODAY, TOMORROW, YESTERDAY или дату в формате YYYY-MM-DD.", parse_mode="Markdown")
-    bot.register_next_step_handler(sent_msg, fetch_horoscope, sign)  # Переход к получению гороскопа
-
-def fetch_horoscope(message, sign):
-    day = message.text
+    day = "TODAY"  # Устанавливаем день как TODAY
     horoscope = get_daily_horoscope(sign, day)  # Получение гороскопа
     if not horoscope or "error" in horoscope:
         bot.send_message(message.chat.id, "Проблема с источником гороскопа. Проверь введенные данные и попробуй позже.")
@@ -82,8 +73,6 @@ def get_daily_horoscope(sign: str, day: str) -> dict:
 
 @bot.message_handler(func=lambda message: True)
 def log_all_messages(message):
-    # Логируем сообщение
-    logging.info(f"Получено сообщение от {message.from_user.username}: {message.text}")
     bot.reply_to(message, "Ваше сообщение было получено и записано в лог.")  # Ответ на любое сообщение
 
 try:
